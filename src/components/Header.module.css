@@ -1,0 +1,12 @@
+.linkContainer {
+    display: flex;
+    padding: 15px 50px;
+    gap: 20px;
+    position: fixed;
+    right:0;
+}
+
+.linkContainer > a {
+    text-decoration: none;
+    color: black;
+}

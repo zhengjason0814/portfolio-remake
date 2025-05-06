@@ -1,22 +1,18 @@
 .heroContainer {
     display:flex;
-    justify-content: center;
-    align-items: center;
     height:100vh;
     width:100vw;
-    background-color:black
 }
 
 .main {
     display:flex;
     flex-direction:column;
     justify-content:center;
-    align-items:center;
-    color:white;
-    text-align:center;
+    text-align:left;
+    padding: 0px 150px;
 }
 
-h1, h2 {
+h1, h2 , p{
     padding: 0px;
     margin: 0px;
 }
@@ -25,6 +21,13 @@ h1 {
     font-size: 80px;
 }
 
+p {
+    font-size:20px;
+}
+
 .name {
-    color:blue;
+    background:linear-gradient(90deg, #888888 10%, #6ed6ff 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
