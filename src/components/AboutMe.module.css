@@ -1,0 +1,25 @@
+.aboutContainer {
+    display: flex;
+    flex-direction: row;
+    gap:20px;
+    width: 100vw;
+    height: 100vh;
+    margin: 0px 200px;
+    align-items: center;
+    gap: 80px;
+}
+
+.textContainer {
+    display:flex;
+    flex-direction:column;
+    width:30vw;
+}
+
+.aboutText {
+    font-size:16px;
+}
+
+.waffle {
+    width: 500px;
+    height: auto;
+}
