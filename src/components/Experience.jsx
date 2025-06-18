@@ -11,8 +11,8 @@ export default function Expereience() {
                 <h3>REBNY</h3>
                 <p className={styles.position}><em>Technology Intern | Summer 2024</em></p>
                 <ul className={styles.roleDetails}>
-                    <li>Proposed, lead, and developed a project plan to 
-                        implement a assistant widget company lease website.
+                    <li>Proposed, lead, and developed project plans to 
+                        implement an AI widget on the company lease website.
                     </li>
                     <li>Developed a full-stack application with OpenAI API 
                         integration with constant 24/7 uptime.</li>

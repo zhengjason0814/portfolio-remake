@@ -1,10 +1,11 @@
 .aboutContainer {
+    --gap-space :20px;
     display: flex;
     flex-direction: row;
-    gap:20px;
-    width: 100vw;
+    gap:100px;
+    width: calc(100vw - var(--gap-space));
     height: 100vh;
-    margin: 0px 200px;
+    justify-content: center;
     align-items: center;
     gap: 80px;
 }

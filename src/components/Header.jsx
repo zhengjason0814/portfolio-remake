@@ -21,7 +21,7 @@ export default function Header() {
     return (
             <header className={`${styles.linkContainer}` + (visible ? ` ${styles.visible}` : '')}>
                 <a href="#about">About Me</a>
-                <a href="#work">Work Experience</a>
+                <a href="#experience">Work Experience</a>
                 <a href="#projects">Projects</a>
                 <a href="#contact">Contact</a>
             </header>

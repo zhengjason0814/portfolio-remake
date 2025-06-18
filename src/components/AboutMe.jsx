@@ -4,7 +4,7 @@ import waffle from '../assets/waffle.jpg';
 
 export default function AboutMe() {
     return (
-        <div className={styles.aboutContainer}>
+        <div className={styles.aboutContainer} id="about">
             <div className={styles.textContainer}>
             <h1 style={{fontSize:"50px", color:"#B0B0B0"}}>About Me</h1>
             <p className={styles.aboutText}>

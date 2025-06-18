@@ -5,8 +5,8 @@
 
 .experienceBlock {
     color:white;
-    padding: 150px 200px;
-    padding-top: 100px;
+    padding-left: 200px;
+    min-height:80vh;
 }
 
 .experienceBlock h1 {
@@ -32,11 +32,16 @@
     color:#d8e7e6;
 }
 
+.roleDetails {
+    width:100%;
+}
+
 .position, .roleDetails, .nonTechRole {
     font-weight:300;
 }
 
+
 .nonTechRole {
     text-decoration: underline;
-    font-size: 18px;    
+    font-size: 18px;
 }

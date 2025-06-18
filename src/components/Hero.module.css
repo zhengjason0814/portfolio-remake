@@ -1,7 +1,8 @@
 .heroContainer {
+    --margin-space: 200px;
     display:flex;
     height:100vh;
-    width:100vw;
+    max-width:100vw;
     background-color:#121212;
 }
 
