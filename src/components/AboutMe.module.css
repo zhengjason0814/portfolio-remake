@@ -1,13 +1,14 @@
 .aboutContainer {
     --gap-space :20px;
+
     display: flex;
     flex-direction: row;
-    gap:100px;
-    width: calc(100vw - var(--gap-space));
-    height: 100vh;
     justify-content: center;
     align-items: center;
-    gap: 80px;
+    gap:200px;
+
+    width: calc(100vw - var(--gap-space));
+    height: 100vh;
 }
 
 .textContainer {
