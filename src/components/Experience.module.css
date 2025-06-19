@@ -4,9 +4,10 @@
 }
 
 .experienceBlock {
-    color:white;
-    padding-left: 200px;
+    color:#B0B0B0;
+
     min-height:80vh;
+    padding-left: 200px;
 }
 
 .experienceBlock h1 {
@@ -20,8 +21,8 @@
 
 .roles {
     margin-left: 100px;
-    gap:30px;
     width: 850px;
+    gap:30px;
 }
 
 .rebnyRole {
