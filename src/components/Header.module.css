@@ -1,11 +1,14 @@
 .linkContainer {
     display: flex;
-    padding: 20px 200px;
-    max-width: 100%;
+    justify-content:flex-end;
     gap: 20px;
+
+    width: 100%;
+    padding: 20px 200px;
+
     position: fixed;
     right:0;
-    justify-content:flex-end;
+    
     transform: translateY(-100%);
     transition: transform 0.3s ease;
 }

@@ -1,0 +1,39 @@
+.projectContainer {
+    display:flex;
+    justify-content:center;
+    align-items:start;
+    gap: 100px;
+    
+    width:100vw;
+    height:80vh;
+    padding: 100px 0px;
+}
+
+.projectDisplay {
+    width: 40%;
+    height: 70%;
+    border: 1px red solid;
+}
+
+.projectInfo {
+    display:flex;
+    flex-direction:column;
+    justify-content: flex-start;
+
+    padding: 20px;
+    height:calc(100% - 20px);
+}
+
+.projectImage {
+    height: 60%;
+}
+
+.projectDesc {
+    font-size: 18px;
+}
+
+.projectList {
+    border: 1px red solid;
+    width: 40%;
+    height: auto;
+}
