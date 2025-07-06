@@ -22,7 +22,21 @@
 }
 
 .socialContainer {
-    margin-bottom: 12px;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    margin: 12px 0px;
+}
+
+.iconList {
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    gap: 20px;
+}
+
+.icon {
+    color:#e4a053;
 }
 
 .formContainer {
@@ -37,13 +51,35 @@
     border-radius: 5px;
     border: none;
     background-color: #191919;
+    color:#ffffff;
 }
 
+.formContainer input:focus,
+.formContainer textarea:focus {
+  background-color: #191919;
+  color: #ffffff;
+  outline: none;
+  border: 1px solid #ffde0e;
+}
+
+input:-webkit-autofill,
+textarea:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #191919 inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+
 button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+
     padding: 10px 20px;
     border: none;
     border-radius: 5px;
     background:linear-gradient(90deg, #ffde0e 10%, #e4a053 60%);
-    color:#ffffff;
+    color:#121212;
     cursor: pointer;
 }
