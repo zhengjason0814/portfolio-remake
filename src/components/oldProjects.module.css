@@ -1,0 +1,83 @@
+.projectContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15%;
+}
+
+.projectSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+}
+
+.projectList {
+    border-radius: 10px;
+    background-color: #191919;
+    overflow-y: auto;
+}
+
+.projectNames {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline-start: 0px;
+    margin: 0px;
+}
+
+.projectItem {
+    list-style-type: none;
+    cursor: pointer;
+    padding: 18px;
+    text-align: center;
+    color: white;
+    transition: background-color 0.6s;
+}
+
+.projectNames li:hover {
+    background-color: #282828;
+}
+
+.projectDisplay {
+    padding: 20px 50px;
+    border-radius: 20px;
+    background-color: #191919;
+}
+
+.projectInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+}
+
+.projectDisplay, .projectNames, .techStack {
+    flex: 1;
+}
+
+.projectTitle, .projectDesc {
+    color: white;
+}
+
+.projectImage {
+    border-radius: 8px;
+    object-fit: cover;
+}
+
+.projectDesc {
+    font-size: 14px;
+}
+
+.projectPortion {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.techStack {
+    background-color: #191919;
+    border-radius: 8px;
+}

@@ -7,7 +7,7 @@
     align-items: center;
     gap:200px;
 
-    width: calc(100vw - var(--gap-space));
+    width: calc(100% - var(--gap-space));
     height: 100vh;
 }
 

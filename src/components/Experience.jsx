@@ -1,12 +1,13 @@
 import React from 'react';
 import styles from './Experience.module.css';
+import { Typography } from '@mui/material';
 
 export default function Expereience() {
     return (
         <div className={styles.experienceBlock} id="experience">
-        <h1>Experience</h1>
+        <Typography sx={{fontSize:"40px", fontWeight:"bold"}}>Experience</Typography>
         <div className={styles.roles}>
-            <h2><strong>Technical Experience</strong></h2>
+            <h2 style={{fontSize:"30px"}}><strong>Technical Experience</strong></h2>
             <div className={styles.rebny}>
                 <h3>REBNY</h3>
                 <p className={styles.position}><em>Technology Intern | Summer 2024</em></p>
@@ -22,7 +23,12 @@ export default function Expereience() {
                 </ul>
             </div>
             <div className={styles.nonTechRole}>
-                <p>If you want to have a look at my <strong>non-technical</strong> roles, please refer to my <span class="temp-link">LinkedIn!</span></p>
+                <p>If you want to have a look at my <strong>non-technical</strong> roles, please refer to my
+                    <a className={styles.linkedIn}
+                    href="https://www.linkedin.com/in/zhengjason08/"
+                    target="_blank"
+                    rel="noreferrer">LinkedIn!</a>
+                </p>
             </div>
         </div>
     </div>
