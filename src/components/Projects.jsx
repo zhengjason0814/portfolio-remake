@@ -1,4 +1,3 @@
-import React from 'react';
 import { useState } from "react";
 import styles from './Projects.module.css';
 import waffle from '../assets/waffle.jpg';

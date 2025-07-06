@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './Experience.module.css';
 import { Typography } from '@mui/material';
 

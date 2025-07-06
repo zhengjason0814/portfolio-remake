@@ -1,8 +1,8 @@
-import React from 'react';
+import { useState } from 'react';
 import styles from './Header.module.css';
 
 export default function Header() {
-    const [visible, setVisible] = React.useState(false);
+    const [visible, setVisible] = useState(false);
 
     const handleScroll = () => {
         if (window.scrollY > 700) {
@@ -11,7 +11,7 @@ export default function Header() {
             setVisible(false);
         }
     }
-    React.useEffect(() => {
+    useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => {
             window.removeEventListener('scroll', handleScroll);

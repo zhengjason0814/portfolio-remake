@@ -1,4 +1,3 @@
-import React from 'react';
 import styles from './AboutMe.module.css';
 import waffle from '../assets/waffle.jpg';
 
