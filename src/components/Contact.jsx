@@ -1,9 +1,9 @@
 import styles from './Contact.module.css';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import { HiOutlineMail } from 'react-icons/hi';
 import { MdSend } from 'react-icons/md';
-import React, { useRef } from 'react';
+import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import {motion} from 'framer-motion';
 
 
 export default function Contact() {
@@ -28,6 +28,12 @@ export default function Contact() {
     };
 
     return (
+      <motion.div
+                  initial={{ opacity: 0, x: -50 }}
+                  whileInView={{ opacity: 1, x: 0 }}
+                  transition={{ duration: 0.6 }}
+                  viewport={{ once: true, amount: 0.3 }}
+      >
         <div className={styles.contactContainer} id="contact">
             <div className={styles.contactForm}>
                 <div className={styles.contactTitle}>Contact Me!</div>
@@ -50,6 +56,7 @@ export default function Contact() {
                     </form>
             </div>
         </div>
+      </motion.div>
     );
 
 }

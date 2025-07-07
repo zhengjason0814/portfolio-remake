@@ -3,6 +3,8 @@ import styles from './Projects.module.css';
 import waffle from '../assets/waffle.jpg';
 import bootrush from '../assets/bootrush.png';
 import test from '../assets/testimage.png';
+import {motion} from 'framer-motion';
+
 
 export default function Projects() {
     const defaultProject = {title:"Press A Project!", src:test, desc:"Here's the description!"}
@@ -15,29 +17,35 @@ export default function Projects() {
     ];
 
     const [currProject,setCurrProject] = useState(defaultProject);
-
     
     return(
-        <div className={styles.projectContainer} id="projects">
-            <h2 style={{color:"white"}}>Projects</h2>
-            <div className={styles.projectSection}>
-                <div className={styles.projectList}>
-                    {projects.map(project => (
-                        <div className={styles.projectItem} key={project.id} onClick={() => setCurrProject(project)}>{project.title}</div>
-                    ))}
-                </div>
+        <motion.div
+            initial={{ opacity: 0, x: -50 }}
+             whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            viewport={{ once: true, amount: 0.3 }}
+        >
+            <div className={styles.projectContainer} id="projects">
+                <h2 style={{color:"white"}}>Projects</h2>
+                <div className={styles.projectSection}>
+                    <div className={styles.projectList}>
+                        {projects.map(project => (
+                            <div className={styles.projectItem} key={project.id} onClick={() => setCurrProject(project)}>{project.title}</div>
+                        ))}
+                    </div>
 
-                <div className={styles.projectDisplay}>
-                    <img src={currProject.src} className={styles.projectImage} />
-                    <h2 className={styles.projectTitle}>{currProject.title}</h2>
-                    <p className={styles.projectDesc}>{currProject.desc}</p>
-                </div>
+                    <div className={styles.projectDisplay}>
+                        <img src={currProject.src} className={styles.projectImage} />
+                        <h2 className={styles.projectTitle}>{currProject.title}</h2>
+                        <p className={styles.projectDesc}>{currProject.desc}</p>
+                    </div>
 
 
-                <div className={styles.techStack}>
-                    techStack
+                    <div className={styles.techStack}>
+                        techStack
+                    </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }
