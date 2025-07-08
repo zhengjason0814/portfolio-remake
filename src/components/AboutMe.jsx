@@ -8,11 +8,11 @@ export default function AboutMe() {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
         >
             <div className={styles.aboutContainer} id="about">
                 <div className={styles.textContainer}>
-                    <h1 style={{fontSize:"50px", color:"#B0B0B0"}}>About Me</h1>
+                    <h1 style={{fontSize:"50px", color:"#ffffff"}}>About Me</h1>
                     <p className={styles.aboutText}>
                         Based in NY 🗽, I'm a student working towards a B.S. in Information Systems at Stony Brook University. I've developed skillsets with programming languages, web development, and database management technologies.
                         <br /><br />

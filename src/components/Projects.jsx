@@ -3,7 +3,8 @@ import styles from './Projects.module.css';
 import waffle from '../assets/waffle.jpg';
 import bootrush from '../assets/bootrush.png';
 import test from '../assets/testimage.png';
-import {motion} from 'framer-motion';
+import { motion } from "framer-motion";
+import { BsArrowUpRight } from "react-icons/bs";
 
 
 export default function Projects() {
@@ -23,20 +24,25 @@ export default function Projects() {
             initial={{ opacity: 0, x: -50 }}
              whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
         >
             <div className={styles.projectContainer} id="projects">
-                <h2 style={{color:"white"}}>Projects</h2>
+                <h2 style={{color:"white", fontSize:"40px"}}>Projects</h2>
                 <div className={styles.projectSection}>
                     <div className={styles.projectList}>
                         {projects.map(project => (
-                            <div className={styles.projectItem} key={project.id} onClick={() => setCurrProject(project)}>{project.title}</div>
+                            <div className={styles.projectItem} key={project.id} onClick={() => setCurrProject(project)}>
+                                {project.title}
+                            </div>
                         ))}
                     </div>
 
                     <div className={styles.projectDisplay}>
                         <img src={currProject.src} className={styles.projectImage} />
-                        <h2 className={styles.projectTitle}>{currProject.title}</h2>
+                        <a className={styles.projectTitle}
+                            >
+                            {currProject.title}<BsArrowUpRight size={17} className={styles.linkIcon} />
+                        </a>
                         <p className={styles.projectDesc}>{currProject.desc}</p>
                     </div>
 

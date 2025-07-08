@@ -16,9 +16,14 @@
     color:#e0e0e0;
 }
 
-h1, h2 , p{
+.greeting, .nameContainer, .secondaryText{
     padding: 0px;
     margin: 0px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.greeting:hover, .nameContainer:hover, .secondaryText:hover {
+    transform: scale(1.05);
 }
 
 h1 {
@@ -30,6 +35,7 @@ h1 {
     color:#e0e0e0;
 }
 
+
 p {
     font-size:20px;
     color:#e0e0e0;
@@ -40,4 +46,10 @@ p {
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+
+    text-shadow: 0 0 3px rgba(255, 222, 14, 0.4), 0 0 5px rgba(228, 160, 83, 0.4);
+}
+
+h1, h2, p {
+    margin: 0px;
 }

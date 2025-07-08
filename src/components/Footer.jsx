@@ -7,7 +7,7 @@ import { FaReact } from 'react-icons/fa';
 export default function Footer() {
     return (
         <div className={styles.footerContainer}>
-            <p className={styles.name}>© 2025 Jason Zheng</p>
+            <p className={styles.name}>© Jason Zheng 2025</p>
             <div className={styles.techStack}> 
                 <p>Engineered with: </p>    
                 <div style={{ display: 'flex', gap: '10px' }}>

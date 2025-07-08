@@ -1,5 +1,5 @@
 import styles from './Contact.module.css';
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaLinkedin, FaGithub, FaBullseye } from 'react-icons/fa';
 import { MdSend } from 'react-icons/md';
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
@@ -32,7 +32,7 @@ export default function Contact() {
                   initial={{ opacity: 0, x: -50 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   transition={{ duration: 0.6 }}
-                  viewport={{ once: true, amount: 0.3 }}
+                  viewport={{ once: false, amount: 0.3 }}
       >
         <div className={styles.contactContainer} id="contact">
             <div className={styles.contactForm}>

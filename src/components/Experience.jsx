@@ -7,14 +7,15 @@ export default function Expereience() {
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: .5 }}
-            viewport={{ once: true, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.3 }}
         >
             <div className={styles.experienceBlock} id="experience">
-                    <p style={{fontSize:"40px", fontWeight:"bold"}}>Experience</p>
+                <p style={{fontSize:"40px", fontWeight:"bold", marginBottom:"15px", color:"#ffffff"}}>Experience & Skills</p>
+                <div className={styles.experienceContent}>
                     <div className={styles.roles}>
-                        <h2 style={{fontSize:"30px"}}><strong>Technical Experience</strong></h2>
+                        <p style={{fontSize:"30px"}}><strong>Technical</strong></p>
                         <div className={styles.rebny}>
-                            <h3>REBNY</h3>
+                            <p className={styles.rebnyTitle}>REBNY</p>
                             <p className={styles.position}><em>Technology Intern | Summer 2024</em></p>
                             <ul className={styles.roleDetails}>
                                 <li>Proposed, lead, and developed project plans to 
@@ -28,15 +29,19 @@ export default function Expereience() {
                             </ul>
                         </div>
                         <div className={styles.nonTechRole}>
-                            <p>If you want to have a look at my <strong>non-technical</strong> roles, please refer to my
+                            <p>If you want to see <strong>non-technical</strong> roles, refer to my
                                 <a className={styles.linkedIn}
                                 href="https://www.linkedin.com/in/zhengjason08/"
                                 target="_blank"
-                                rel="noreferrer">LinkedIn!</a>
+                                rel="noreferrer"> LinkedIn!</a>
                             </p>
                         </div>
                     </div>
+                    <div className={styles.skillsContent}>
+                        <p style={{fontSize:"30px"}}><strong>Skills</strong></p>
+                    </div>
                 </div>
+            </div>
         </motion.div>
     );
 }
