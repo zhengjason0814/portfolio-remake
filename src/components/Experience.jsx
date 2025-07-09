@@ -1,5 +1,11 @@
 import styles from './Experience.module.css';
 import {motion} from 'framer-motion';
+import 'react-circular-progressbar/dist/styles.css';
+import TechSkill from './TechSkill';
+import { FaReact, FaPython, FaJava, FaJs, FaHtml5, FaCss3Alt} from 'react-icons/fa';
+import { SiRuby } from 'react-icons/si';
+
+const value = 80;
 
 export default function Expereience() {
     return (
@@ -39,6 +45,15 @@ export default function Expereience() {
                     </div>
                     <div className={styles.skillsContent}>
                         <p style={{fontSize:"30px"}}><strong>Skills</strong></p>
+                        <div className={styles.technologyContainer}>
+                            <TechSkill className={styles.techIcon} value={80} icon={FaJava} color="#EA2D2E" />
+                            <TechSkill className={styles.techIcon} value={80} icon={FaJs} color="#F7DF1E" />
+                            <TechSkill className={styles.techIcon} value={70} icon={FaPython} color="#306998" />
+                            <TechSkill className={styles.techIcon} value={80} icon={FaHtml5} color="#E34F26" />
+                            <TechSkill className={styles.techIcon} value={60} icon={FaCss3Alt} color="#264DE4" />
+                            <TechSkill className={styles.techIcon} value={60} icon={FaReact} color="#61DBFB" />
+                            <TechSkill className={styles.techIcon} value={10} icon={SiRuby} color="#CC342D" />
+                        </div>
                     </div>
                 </div>
             </div>
