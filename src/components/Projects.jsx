@@ -2,13 +2,13 @@ import { useState } from "react";
 import styles from './Projects.module.css';
 import waffle from '../assets/waffle.jpg';
 import bootrush from '../assets/bootrush.png';
-import test from '../assets/testimage.png';
+import blank from '../assets/blank.png';
 import { motion } from "framer-motion";
 import { BsArrowUpRight } from "react-icons/bs";
 
 
 export default function Projects() {
-    const defaultProject = {title:"Press A Project!", src:test, desc:"Here's the description!"}
+    const defaultProject = {title:"Press A Project!", src:blank, desc:"Here's the description!"}
     const projects = [
         {id:1, title:"BootyRush", src:bootrush, desc:"A silly pirate gambling gaming highlighting the risks of gambling! Won 1st place in the Treasure Trove of Talent track at HopperHacks 2025."}, 
         {id:2, title:"Basic Online Calculator", src:waffle, desc:"test desc 2"},
@@ -27,7 +27,7 @@ export default function Projects() {
             viewport={{ once: false, amount: 0.3 }}
         >
             <div className={styles.projectContainer} id="projects">
-                <h2 style={{color:"white", fontSize:"40px"}}>Projects</h2>
+                <h2 style={{color:"white", fontSize:"40px", color:"#ffffff", textShadow:"0 0 3px rgb(255, 255, 255)"}}>Projects</h2>
                 <div className={styles.projectSection}>
                     <div className={styles.projectList}>
                         {projects.map(project => (

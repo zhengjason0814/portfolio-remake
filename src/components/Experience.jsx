@@ -16,7 +16,7 @@ export default function Expereience() {
             viewport={{ once: false, amount: 0.3 }}
         >
             <div className={styles.experienceBlock} id="experience">
-                <p style={{fontSize:"40px", fontWeight:"bold", marginBottom:"15px", color:"#ffffff"}}>Experience & Skills</p>
+                <p style={{fontSize:"40px", fontWeight:"bold", marginBottom:"15px", color:"#ffffff", textShadow:"0 0 3px rgb(255, 255, 255)"}}>Experience & Skills</p>
                 <div className={styles.experienceContent}>
                     <div className={styles.roles}>
                         <p style={{fontSize:"30px"}}><strong>Technical</strong></p>
@@ -46,7 +46,7 @@ export default function Expereience() {
                     <div className={styles.skillsContent}>
                         <p style={{fontSize:"30px"}}><strong>Skills</strong></p>
                         <div className={styles.technologyContainer}>
-                            <TechSkill className={styles.techIcon} value={80} icon={FaJava} color="#EA2D2E" />
+                            <TechSkill className={styles.techIcon} value={65} icon={FaJava} color="#EA2D2E" />
                             <TechSkill className={styles.techIcon} value={80} icon={FaJs} color="#F7DF1E" />
                             <TechSkill className={styles.techIcon} value={70} icon={FaPython} color="#306998" />
                             <TechSkill className={styles.techIcon} value={80} icon={FaHtml5} color="#E34F26" />

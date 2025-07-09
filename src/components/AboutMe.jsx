@@ -11,17 +11,19 @@ export default function AboutMe() {
             viewport={{ once: false, amount: 0.3 }}
         >
             <div className={styles.aboutContainer} id="about">
-                <div className={styles.textContainer}>
-                    <h1 style={{fontSize:"50px", color:"#ffffff"}}>About Me</h1>
-                    <p className={styles.aboutText}>
-                        Based in NY 🗽, I'm a student working towards a B.S. in Information Systems at Stony Brook University. I've developed skillsets with programming languages, web development, and database management technologies.
-                        <br /><br />
-                        In a past internship, I have also had the opportunity to not only be a part of but lead a new project that utilized API's to develop new technologies to streamline user inquiries about their lease sales website.
-                        <br /><br />
-                        If there are any questions you may have about me, please feel free to reach out!
-                    </p>
+                <div className={styles.photoContainer}>
+                    <h1 style={{fontSize:"50px", color:"#ffffff", textShadow:"0 0 3px rgb(255, 255, 255)"}}>About Me</h1>
+                    <img className={styles.waffle} src={waffle}/>
                 </div>
-            <img className={styles.waffle} src={waffle}/>
+                <p className={styles.aboutText}>
+                        Hi there! I’m Jason Zheng, a student based in New York, currently pursuing my undergraduate degree at Stony Brook University with the goal of becoming a software developer.
+                        <br /><br />
+                        Passionate about engineering awe-inspiring technology, I’m learning how to turn innovative ideas into real-world applications. I strive to bring any idea — silly or serious — into reality, transforming simple thoughts into life-changing experiences.
+                        <br /><br />
+                        In the past, I interned at <span style={{color:"white"}}>REBNY</span>, where I built an <span style={{color:"white"}}>AI assistant</span> to streamline customer inquiries about lease purchases. I’ve also competed in university hackathons, where in one, our team landed first place in a track for developing a meaningful application about gambling.
+                        <br /><br />
+                        In my free time, I'm usually with friends playing online games or in the city.
+                </p>
             </div>
         </motion.div>
     );

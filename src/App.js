@@ -10,7 +10,7 @@ import MouseGlow from './components/MouseGlow';
 
 function App() {
   return (
-    <div>
+    <>
       <MouseGlow />
       <div className="container">
       <Header />
@@ -21,7 +21,7 @@ function App() {
       <Contact />
     </div>
       <Footer />
-    </div>
+    </>
   );
 }
 
