@@ -65,12 +65,13 @@
 .technologyContainer {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
+    align-items:center;
     gap: 20px;
 
     height:70%;
     width: 80%;
-    justify-content: center;
-    align-items:center;
+
 }
 
 .techIcon {
