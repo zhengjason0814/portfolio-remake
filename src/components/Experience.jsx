@@ -2,8 +2,10 @@ import styles from './Experience.module.css';
 import {motion} from 'framer-motion';
 import 'react-circular-progressbar/dist/styles.css';
 import TechSkill from './TechSkill';
-import { FaReact, FaPython, FaJava, FaJs, FaHtml5, FaCss3Alt} from 'react-icons/fa';
-import { SiRuby } from 'react-icons/si';
+import { FaReact, FaPython, FaJava, FaJs, FaHtml5, FaCss3Alt, FaNodeJs} from 'react-icons/fa';
+import { SiRuby, SiMongodb, SiExpress} from 'react-icons/si';
+
+import whiteArrow from '../assets/whiteArrow.png';
 
 const value = 80;
 
@@ -49,10 +51,15 @@ export default function Expereience() {
                             <TechSkill className={styles.techIcon} value={65} icon={FaJava} color="#EA2D2E" />
                             <TechSkill className={styles.techIcon} value={80} icon={FaJs} color="#F7DF1E" />
                             <TechSkill className={styles.techIcon} value={70} icon={FaPython} color="#306998" />
-                            <TechSkill className={styles.techIcon} value={80} icon={FaHtml5} color="#E34F26" />
-                            <TechSkill className={styles.techIcon} value={60} icon={FaCss3Alt} color="#264DE4" />
                             <TechSkill className={styles.techIcon} value={60} icon={FaReact} color="#61DBFB" />
                             <TechSkill className={styles.techIcon} value={10} icon={SiRuby} color="#CC342D" />
+                            <TechSkill className={styles.techIcon} value={10} icon={FaNodeJs} color="##339933" />
+                            <TechSkill className={styles.techIcon} value={10} icon={SiMongodb} color="#47A248" />
+                            <TechSkill className={styles.techIcon} value={10} icon={SiExpress} color="#ffffff" />
+                        </div>
+                        <div className={styles.skillPointer}>
+                            <p>hover them!</p>
+                            <img src={whiteArrow}/>
                         </div>
                     </div>
                 </div>
