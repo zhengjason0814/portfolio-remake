@@ -5,19 +5,51 @@ import bootrush from '../assets/bootrush.png';
 import blank from '../assets/blank.png';
 import { motion } from "framer-motion";
 import { BsArrowUpRight } from "react-icons/bs";
-
+import calculatorImage from '../assets/calculatorImage.png';
+import walmartImage from '../assets/walmartImage.png';
+import customerImage from '../assets/customerImage.png';
+import { FaReact, FaPython, FaJava, FaJs, FaHtml5, FaCss3Alt, FaNodeJs} from 'react-icons/fa';
+import { SiRuby, SiMongodb, SiExpress} from 'react-icons/si';
 
 export default function Projects() {
-    const defaultProject = {title:"Press A Project!", src:blank, desc:"Here's the description!"}
+    const defaultProject = {title:"Portfolio Project", src:blank, techStack:["html","css","javascript"], desc:"You're looking at it!"}
     const projects = [
-        {id:1, title:"BootyRush", src:bootrush, desc:"A silly pirate gambling gaming highlighting the risks of gambling! Won 1st place in the Treasure Trove of Talent track at HopperHacks 2025."}, 
-        {id:2, title:"Basic Online Calculator", src:waffle, desc:"test desc 2"},
-        {id:3, title:"Walmart RFID System", src:waffle, desc:"test desc 3"},
-        {id:4, title:"Adapative Inquiry Responder", src:waffle, desc:"test desc 3"},
-        {id:5, title:"Spotify Clone", src:waffle, desc:"test desc 3"},
+        {id:1, title:"BootyRush", src:bootrush, techStack:["html","css","javascript"], link:"https://zhengjason0814.github.io/bootyRush/index.html", desc:"A silly pirate gambling gaming highlighting the risks of gambling! Won 1st place in the Treasure Trove of Talent track at HopperHacks 2025."}, 
+        {id:2, title:"Basic Online Calculator", src:calculatorImage, techStack:["html","css","javascript"], link:"https://zhengjason0814.github.io/calculator/", desc:"An extremely basic online calculator that can do basic arithmetic operations."},
+        {id:3, title:"Walmart RFID System", src:walmartImage, techStack:["java"], link:"https://github.com/zhengjason0814/School-Projects", desc:"A demo of a department store RFID system that tracks inventory and provides real-time updates on stock levels."},
+        {id:4, title:"Inquiry Responder", src:customerImage, techStack:["java"], link:"https://github.com/zhengjason0814/School-Projects", desc:"A demo of a customer service inquiry responder that uses a properly inputted text file with issues and solutions to provide accurate and helpful responses to customer inquiries."},
+        {id:5, title:"Spotify Clone", src:waffle, link:"", techStack:["html","css","javascript","react","nodejs","express","mongodb"], desc:"This is a planned project, TBD! Here's a picture of a waffle for now."},
     ];
 
     const [currProject,setCurrProject] = useState(defaultProject);
+
+    const getIconForTech = (tech) => {
+    switch (tech) {
+        case "html":
+            return <FaHtml5 size={40} className={styles.techIcon} color="#E34F26" />;
+        case "css":
+            return <FaCss3Alt size={40} className={styles.techIcon} color="#1572B6" />;
+        case "javascript":
+            return <FaJs size={40} className={styles.techIcon} color="#F7DF1E" />;
+        case "react":
+            return <FaReact size={40} className={styles.techIcon} color="#61DBFB" />;
+        case "nodejs":
+            return <FaNodeJs size={40} className={styles.techIcon} color="#339933" />;
+        case "express":
+            return <SiExpress size={40} className={styles.techIcon} color="#ffffff" />;
+        case "mongodb":
+            return <SiMongodb size={40} className={styles.techIcon} color="#47A248" />;
+        case "java":
+            return <FaJava size={40} className={styles.techIcon} color="#EA2D2E" />;
+        case "ruby":
+            return <SiRuby size={40} className={styles.techIcon} color="#CC342D" />;
+        case "python":
+            return <FaPython size={40} className={styles.techIcon} color="#306998" />;
+        default:
+            return null;
+    }
+    };
+
     
     return(
         <motion.div
@@ -40,7 +72,9 @@ export default function Projects() {
                     <div className={styles.projectDisplay}>
                         <img src={currProject.src} className={styles.projectImage} />
                         <a className={styles.projectTitle}
-                            >
+                            href={currProject.link}
+                            target="_blank"
+                            rel="noreferrer">
                             {currProject.title}<BsArrowUpRight size={17} className={styles.linkIcon} />
                         </a>
                         <p className={styles.projectDesc}>{currProject.desc}</p>
@@ -48,7 +82,7 @@ export default function Projects() {
 
 
                     <div className={styles.techStack}>
-                        techStack
+                        {currProject.techStack.map(tech => (getIconForTech(tech)))}
                     </div>
                 </div>
             </div>

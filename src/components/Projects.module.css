@@ -29,9 +29,10 @@
 }
 
 .techStack {
-    flex:.5;
-
-    padding: 10px;
+    display:flex;
+    flex-direction: column;
+    gap:10px;
+    padding: 13px;
 }
 
 .projectList {
@@ -76,6 +77,7 @@
     margin: 0px;
     font-size: 24px;
     font-weight: bold;
+    text-decoration: none;
 
     transition: color 0.4s ease;
 }
@@ -112,4 +114,13 @@
 
     text-align:left;
     font-size: 14px;
+}
+
+.techIcon {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.techIcon:hover {
+    transform: scale(1.1);
 }

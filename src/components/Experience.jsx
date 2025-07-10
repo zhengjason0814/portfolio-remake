@@ -2,7 +2,7 @@ import styles from './Experience.module.css';
 import {motion} from 'framer-motion';
 import 'react-circular-progressbar/dist/styles.css';
 import TechSkill from './TechSkill';
-import { FaReact, FaPython, FaJava, FaJs, FaHtml5, FaCss3Alt, FaNodeJs} from 'react-icons/fa';
+import { FaReact, FaPython, FaJava, FaJs, FaNodeJs} from 'react-icons/fa';
 import { SiRuby, SiMongodb, SiExpress} from 'react-icons/si';
 
 import whiteArrow from '../assets/whiteArrow.png';
