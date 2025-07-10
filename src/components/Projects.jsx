@@ -109,9 +109,9 @@ export default function Projects() {
                         <motion.div
                             key={currProject.id}
                             className={styles.projectDisplay}
-                            initial={{ opacity: 0, x:200}}
+                            initial={{ opacity: 0, x:20}}
                             animate={{ opacity: 1, x:0}}
-                            exit={{ opacity: 0, x:200}}
+                            exit={{ opacity: 0, x:20}}
                             transition={{ duration: 0.3 }}
                         >
                             <div className={styles.projectDisplay}>
@@ -131,9 +131,9 @@ export default function Projects() {
                         <motion.div
                             key={currProject.id + "-tech"}
                             className={styles.techStack}
-                            initial={{ opacity: 0 , x:200}}
+                            initial={{ opacity: 0 , x:20}}
                             animate={{ opacity: 1, x:0}}
-                            exit={{ opacity: 0 , x:200}}
+                            exit={{ opacity: 0 , x:20}}
                             transition={{ duration: 0.3 }}
                         >
                             {currProject.techStack.map((tech, index) => (
