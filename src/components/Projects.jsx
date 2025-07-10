@@ -9,16 +9,51 @@ import calculatorImage from '../assets/calculatorImage.png';
 import walmartImage from '../assets/walmartImage.png';
 import customerImage from '../assets/customerImage.png';
 import { FaReact, FaPython, FaJava, FaJs, FaHtml5, FaCss3Alt, FaNodeJs} from 'react-icons/fa';
+import { FaShoppingCart, FaCalculator, FaLightbulb, FaSpotify} from 'react-icons/fa';
+import { GiCrossedPistols } from 'react-icons/gi';
+
 import { SiRuby, SiMongodb, SiExpress} from 'react-icons/si';
 
 export default function Projects() {
     const defaultProject = {title:"Portfolio Project", src:blank, techStack:["html","css","javascript"], desc:"You're looking at it!"}
     const projects = [
-        {id:1, title:"BootyRush", src:bootrush, techStack:["html","css","javascript"], link:"https://zhengjason0814.github.io/bootyRush/index.html", desc:"A silly pirate gambling gaming highlighting the risks of gambling! Won 1st place in the Treasure Trove of Talent track at HopperHacks 2025."}, 
-        {id:2, title:"Basic Online Calculator", src:calculatorImage, techStack:["html","css","javascript"], link:"https://zhengjason0814.github.io/calculator/", desc:"An extremely basic online calculator that can do basic arithmetic operations."},
-        {id:3, title:"Walmart RFID System", src:walmartImage, techStack:["java"], link:"https://github.com/zhengjason0814/School-Projects", desc:"A demo of a department store RFID system that tracks inventory and provides real-time updates on stock levels."},
-        {id:4, title:"Inquiry Responder", src:customerImage, techStack:["java"], link:"https://github.com/zhengjason0814/School-Projects", desc:"A demo of a customer service inquiry responder that uses a properly inputted text file with issues and solutions to provide accurate and helpful responses to customer inquiries."},
-        {id:5, title:"Spotify Clone", src:waffle, link:"", techStack:["html","css","javascript","react","nodejs","express","mongodb"], desc:"This is a planned project, TBD! Here's a picture of a waffle for now."},
+        {id:1,
+            title:"BootyRush",
+            icon:<GiCrossedPistols color="#705540"/>,
+            src:bootrush,
+            techStack:["html","css","javascript"],
+            link:"https://zhengjason0814.github.io/bootyRush/index.html",
+            desc:"A silly pirate gambling gaming highlighting the risks of gambling! Won 1st place in the Treasure Trove of Talent track at HopperHacks 2025."
+        }, 
+        {id:2,
+            title:"Basic Online Calculator",
+            icon:<FaCalculator color="#34495e"/>,
+            src:calculatorImage,
+            techStack:["html","css","javascript"],
+            link:"https://zhengjason0814.github.io/calculator/",
+            desc:"An extremely basic online calculator that can do basic arithmetic operations."
+        },
+        {id:3,
+            title:"Walmart RFID System",
+            icon:<FaShoppingCart color="#2c3e50"/>,
+            src:walmartImage, techStack:["java"],
+            link:"https://github.com/zhengjason0814/School-Projects",
+            desc:"A demo of a department store RFID system that tracks inventory and provides real-time updates on stock levels."
+        },
+        {id:4,
+            title:"Inquiry Responder",
+            icon:<FaLightbulb color="#f1c40f"/>,
+            src:customerImage, techStack:["java"],
+            link:"https://github.com/zhengjason0814/School-Projects",
+            desc:"A demo of a customer service inquiry responder that uses a properly inputted text file with issues and solutions to provide accurate and helpful responses to customer inquiries."
+        },
+        {id:5,
+            title:"Spotify Clone",
+            icon:<FaSpotify color="#1DB954"/>,
+            src:waffle, link:"",
+            techStack:["html","css","javascript","react","nodejs","express","mongodb"],
+            desc:"This is a planned project, TBD! Here's a picture of a waffle for now."
+        },
     ];
 
     const [currProject,setCurrProject] = useState(defaultProject);
@@ -64,6 +99,7 @@ export default function Projects() {
                     <div className={styles.projectList}>
                         {projects.map(project => (
                             <div className={styles.projectItem} key={project.id} onClick={() => setCurrProject(project)}>
+                                {project.icon}
                                 {project.title}
                             </div>
                         ))}
