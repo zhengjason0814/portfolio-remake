@@ -2,7 +2,6 @@ import styles from './Hero.module.css';
 import { useEffect, useRef } from 'react';
 import Typed from 'typed.js';
 
-
 export default function Hero() {
     const typedRef = useRef(null);
     const typedInstance = useRef(null);

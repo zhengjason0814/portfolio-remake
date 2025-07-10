@@ -12,9 +12,9 @@ function App() {
   return (
     <>
       <MouseGlow />
+      <Hero />
       <div className="container">
       <Header />
-      <Hero />
       <AboutMe />
       <Experience />
       <Projects />

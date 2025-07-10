@@ -1,21 +1,29 @@
 .heroContainer {
-    --margin-space: 200px;
-
     display:flex;
+    flex-direction:column;
+    justify-content: center;
 
-    max-width:100vw;
+    max-width:100%;
     height:100vh;
+    background-color:#171b22;
 }
 
 .main {
     display:flex;
     flex-direction:column;
     justify-content:center;
+    width:100%;
+    max-width:clamp(600px, 1200px, 1500px);
+    
+    margin-left:auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
 
     text-align:left;
     color:#e0e0e0;
-}
 
+}
 .greeting, .nameContainer, .secondaryText{
     padding: 0px;
     margin: 0px;
