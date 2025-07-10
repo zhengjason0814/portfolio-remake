@@ -3,7 +3,7 @@ import styles from './Projects.module.css';
 import waffle from '../assets/waffle.jpg';
 import bootrush from '../assets/bootrush.png';
 import blank from '../assets/blank.png';
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { BsArrowUpRight } from "react-icons/bs";
 import calculatorImage from '../assets/calculatorImage.png';
 import walmartImage from '../assets/walmartImage.png';
@@ -69,21 +69,49 @@ export default function Projects() {
                         ))}
                     </div>
 
-                    <div className={styles.projectDisplay}>
-                        <img src={currProject.src} className={styles.projectImage} />
-                        <a className={styles.projectTitle}
-                            href={currProject.link}
-                            target="_blank"
-                            rel="noreferrer">
-                            {currProject.title}<BsArrowUpRight size={17} className={styles.linkIcon} />
-                        </a>
-                        <p className={styles.projectDesc}>{currProject.desc}</p>
-                    </div>
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={currProject.id}
+                            className={styles.projectDisplay}
+                            initial={{ opacity: 0, x:200}}
+                            animate={{ opacity: 1, x:0}}
+                            exit={{ opacity: 0, x:200}}
+                            transition={{ duration: 0.3 }}
+                        >
+                            <div className={styles.projectDisplay}>
+                            <img src={currProject.src} className={styles.projectImage} />
+                            <a className={styles.projectTitle}
+                                href={currProject.link}
+                                target="_blank"
+                                rel="noreferrer">
+                                {currProject.title}<BsArrowUpRight size={17} className={styles.linkIcon} />
+                            </a>
+                            <p className={styles.projectDesc}>{currProject.desc}</p>
+                            </div>
+                        </motion.div>
+                    </AnimatePresence>
 
-
-                    <div className={styles.techStack}>
-                        {currProject.techStack.map(tech => (getIconForTech(tech)))}
-                    </div>
+                    <AnimatePresence mode="wait">
+                        <motion.div
+                            key={currProject.id + "-tech"}
+                            className={styles.techStack}
+                            initial={{ opacity: 0 , x:200}}
+                            animate={{ opacity: 1, x:0}}
+                            exit={{ opacity: 0 , x:200}}
+                            transition={{ duration: 0.3 }}
+                        >
+                            {currProject.techStack.map((tech, index) => (
+                                <motion.div
+                                key={tech + index}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                transition={{ delay: 0.1 * index }}
+                                >
+                                    {getIconForTech(tech)}
+                                </motion.div>
+                            ))}
+                        </motion.div>
+                    </AnimatePresence>
                 </div>
             </div>
         </motion.div>
