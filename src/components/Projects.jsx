@@ -18,7 +18,7 @@ export default function Projects() {
     const defaultProject = {title:"Portfolio Project", src:blank, techStack:["html","css","javascript"], desc:"You're looking at it!"}
     const projects = [
         {id:1,
-            title:"BootyRush",
+            title:"Pirate Gambling",
             icon:<GiCrossedPistols color="#705540"/>,
             src:bootrush,
             techStack:["html","css","javascript"],
@@ -94,7 +94,7 @@ export default function Projects() {
             viewport={{ once: false, amount: 0.3 }}
         >
             <div className={styles.projectContainer} id="projects">
-                <h2 style={{color:"white", fontSize:"40px", color:"#ffffff", textShadow:"0 0 3px rgb(255, 255, 255)"}}>Projects</h2>
+                <h2 style={{color:"white", fontSize:"40px", textShadow:"0 0 3px rgb(255, 255, 255)"}}>Projects</h2>
                 <div className={styles.projectSection}>
                     <div className={styles.projectList}>
                         {projects.map(project => (
@@ -115,7 +115,7 @@ export default function Projects() {
                             transition={{ duration: 0.3 }}
                         >
                             <div className={styles.projectDisplay}>
-                            <img src={currProject.src} className={styles.projectImage} />
+                            <img src={currProject.src} className={styles.projectImage} alt="project" />
                             <a className={styles.projectTitle}
                                 href={currProject.link}
                                 target="_blank"
