@@ -1,5 +1,5 @@
 import styles from './AboutMe.module.css';
-import waffle from '../assets/waffle.jpg';
+import waffle from '../assets/temp.png';
 import {motion} from 'framer-motion';
 
 export default function AboutMe() {
