@@ -3,6 +3,7 @@ import waffle from '../assets/waffle.jpg';
 import {motion} from 'framer-motion';
 
 export default function AboutMe() {
+
     return (
         <motion.div
             initial={{ opacity: 0, x: -50 }}
