@@ -35,7 +35,7 @@
   transition: transform 0.3s ease-in-out;
 }
 
-.waffle:hover {
+.temp:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px rgba(84, 84, 84, 0.5);
 }

@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import Typed from "typed.js";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
+import { FiFileText } from "react-icons/fi";
 
 export default function Hero() {
   const typedRef = useRef(null);
@@ -79,6 +80,15 @@ export default function Hero() {
         <h2 className={styles.secondaryText}>
           I am a <span ref={typedRef}></span>
         </h2>
+        <a
+          href="/resume.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          className={styles.resumeButton}
+        >
+          <FiFileText size={30} color="#121212" />
+          <p style={{ color: "#121212" }}>Resume</p>
+        </a>
       </div>
     </div>
   );
