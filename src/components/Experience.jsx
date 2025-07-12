@@ -7,8 +7,6 @@ import { SiRuby, SiMongodb, SiExpress } from "react-icons/si";
 
 import whiteArrow from "../assets/whiteArrow.png";
 
-const value = 80;
-
 export default function Expereience() {
   return (
     <motion.div
@@ -127,7 +125,10 @@ export default function Expereience() {
             </div>
             <div className={styles.skillPointer}>
               <p>hover them!</p>
-              <img src={whiteArrow} />
+              <img
+                src={whiteArrow}
+                alt="arrow pointing to skills saying hover them"
+              />
             </div>
           </div>
         </div>

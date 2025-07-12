@@ -1,5 +1,5 @@
 import styles from "./AboutMe.module.css";
-import waffle from "../assets/temp.png";
+import temp from "../assets/temp.png";
 import { motion } from "framer-motion";
 
 export default function AboutMe() {
@@ -21,7 +21,11 @@ export default function AboutMe() {
           >
             About Me
           </h1>
-          <img className={styles.waffle} src={waffle} />
+          <img
+            className={styles.temp}
+            src={temp}
+            alt="person smiling at camera"
+          />
         </div>
         <p className={styles.aboutText}>
           Hi there! I’m Jason Zheng, a student based in New York, currently
