@@ -38,7 +38,7 @@
 }
 
 .contactTitle {
-  font-size: 2.5rem;
+  font-size: 3rem;
   font-weight: bold;
 }
 
@@ -133,8 +133,28 @@ button:hover {
   border-bottom: 5px solid #ffc400;
   border-radius: 5px;
   color: black;
-  font-size: 12px;
+  font-size: 0.75rem;
   padding: 10px;
 
   animation: slideInAnimation 3s ease-in forwards;
+}
+
+/* Here starts the media queries for tablets */
+
+@media (max-width: 1024px) {
+  .contactContainer {
+    height: 65vh;
+  }
+
+  .contactForm {
+    width: 70%;
+  }
+}
+
+/* Here starts the media queries for phones */
+
+@media (max-width: 600px) {
+  .contactContainer {
+    height: 90vh;
+  }
 }

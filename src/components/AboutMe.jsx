@@ -9,18 +9,11 @@ export default function AboutMe() {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: false, amount: 0.3 }}
+      style={{ display: "flex", justifyContent: "center" }}
     >
       <div className={styles.aboutContainer} id="about">
         <div className={styles.photoContainer}>
-          <h1
-            style={{
-              fontSize: "50px",
-              color: "#ffffff",
-              textShadow: "0 0 3px rgb(255, 255, 255)",
-            }}
-          >
-            About Me
-          </h1>
+          <h1 className={styles.sectionTitle}>About Me</h1>
           <img
             className={styles.temp}
             src={temp}

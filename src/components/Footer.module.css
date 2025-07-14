@@ -14,11 +14,12 @@
   height: 100%;
   margin-left: 20px;
   margin-right: 20px;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .name,
 .techStack p {
-  font-size: 15px;
+  font-size: 1rem;
 }
 
 .techStack {
@@ -26,4 +27,22 @@
   align-items: center;
 
   gap: 10px;
+}
+
+.techIcon {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+
+/* Here starts the media queries for phones */
+
+@media (max-width: 600px) {
+  .techStack {
+    flex-direction: column;
+    gap: 5px;
+  }
+  .techIcon {
+    width: 1.25rem;
+    height: 1.25rem;
+  }
 }

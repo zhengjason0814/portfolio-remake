@@ -7,34 +7,36 @@
 html {
   scroll-behavior: smooth;
   background-color: #121212;
+  font-size: 16px;
 }
 
 .container {
   width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 16px;
-  padding-right: 16px;
-  border-radius: 100%;
-
-  max-width: 100%;
-  z-index: -1;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
 }
 
-@media (min-width: 600px) {
-  .container {
-    max-width: 600px;
-  }
+.reactIcon {
+  font-size: 1rem;
 }
 
-@media (min-width: 900px) {
+@media (max-width: 1024px) {
   .container {
     max-width: 900px;
   }
+  html {
+    font-size: 14px;
+  }
 }
 
-@media (min-width: 1200px) {
+@media (max-width: 600px) {
   .container {
-    max-width: 1200px;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  html {
+    font-size: 12px;
   }
 }

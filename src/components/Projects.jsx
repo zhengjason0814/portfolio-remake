@@ -95,39 +95,25 @@ export default function Projects() {
   const getIconForTech = (tech) => {
     switch (tech) {
       case "html":
-        return (
-          <FaHtml5 size={40} className={styles.techIcon} color="#E34F26" />
-        );
+        return <FaHtml5 className={styles.techIcon} color="#E34F26" />;
       case "css":
-        return (
-          <FaCss3Alt size={40} className={styles.techIcon} color="#1572B6" />
-        );
+        return <FaCss3Alt className={styles.techIcon} color="#1572B6" />;
       case "javascript":
-        return <FaJs size={40} className={styles.techIcon} color="#F7DF1E" />;
+        return <FaJs className={styles.techIcon} color="#F7DF1E" />;
       case "react":
-        return (
-          <FaReact size={40} className={styles.techIcon} color="#61DBFB" />
-        );
+        return <FaReact className={styles.techIcon} color="#61DBFB" />;
       case "nodejs":
-        return (
-          <FaNodeJs size={40} className={styles.techIcon} color="#339933" />
-        );
+        return <FaNodeJs className={styles.techIcon} color="#339933" />;
       case "express":
-        return (
-          <SiExpress size={40} className={styles.techIcon} color="#ffffff" />
-        );
+        return <SiExpress className={styles.techIcon} color="#ffffff" />;
       case "mongodb":
-        return (
-          <SiMongodb size={40} className={styles.techIcon} color="#47A248" />
-        );
+        return <SiMongodb className={styles.techIcon} color="#47A248" />;
       case "java":
-        return <FaJava size={40} className={styles.techIcon} color="#EA2D2E" />;
+        return <FaJava className={styles.techIcon} color="#EA2D2E" />;
       case "ruby":
-        return <SiRuby size={40} className={styles.techIcon} color="#CC342D" />;
+        return <SiRuby className={styles.techIcon} color="#CC342D" />;
       case "python":
-        return (
-          <FaPython size={40} className={styles.techIcon} color="#306998" />
-        );
+        return <FaPython className={styles.techIcon} color="#306998" />;
       default:
         return null;
     }
@@ -139,17 +125,10 @@ export default function Projects() {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: false, amount: 0.3 }}
+      style={{ display: "flex", justifyContent: "center" }}
     >
       <div className={styles.projectContainer} id="projects">
-        <h2
-          style={{
-            color: "white",
-            fontSize: "40px",
-            textShadow: "0 0 3px rgb(255, 255, 255)",
-          }}
-        >
-          Projects
-        </h2>
+        <h2 className={styles.sectionTitle}>Projects</h2>
         <div className={styles.projectSection}>
           <div className={styles.projectList}>
             {projects.map((project) => (

@@ -1,15 +1,14 @@
 import { useState } from "react";
 import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
-import styles from "./Experience.module.css";
+import styles from "./TechSkill.module.css";
 
 export default function TechSkill({ value, icon: Icon, color }) {
   const [progress, setProgress] = useState(0);
 
   return (
     <div
-      className={styles.techIcon}
-      style={{ width: 100, position: "relative" }}
+      className={styles.techCircle}
       onMouseEnter={() => setProgress(value)}
       onMouseLeave={() => setProgress(0)}
     >
@@ -30,7 +29,7 @@ export default function TechSkill({ value, icon: Icon, color }) {
           transform: "translate(-50%, -45%)",
         }}
       >
-        <Icon size={50} color={color} />
+        <Icon className={styles.techIcon} color={color} />
       </div>
     </div>
   );

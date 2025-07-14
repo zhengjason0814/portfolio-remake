@@ -86,7 +86,7 @@ export default function Hero() {
           rel="noopener noreferrer"
           className={styles.resumeButton}
         >
-          <FiFileText size={30} color="#121212" />
+          <FiFileText className="reactIcon" color="#121212" />
           <p style={{ color: "#121212" }}>Resume</p>
         </a>
       </div>

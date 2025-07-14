@@ -20,13 +20,21 @@
   min-height: 80vh;
 }
 
+.sectionTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffffff;
+  text-shadow: 0 0 3px rgb(255, 255, 255);
+}
+
+.technicalTitle {
+  font-size: 1.8rem;
+}
+
 .experienceContent {
   display: flex;
   width: 100%;
-}
-
-.roles h2 {
-  font-size: 35px;
 }
 
 .roles {
@@ -60,7 +68,6 @@
 
 .nonTechRole p {
   text-decoration: underline;
-  font-size: 16px;
 }
 
 .linkedIn {
@@ -90,17 +97,6 @@
   width: 80%;
 }
 
-.techIcon {
-  display: inline-block;
-  transition: transform 0.3s ease;
-}
-
-.techIcon:hover {
-  transform: scale(1.1);
-  border-radius: 50%;
-  box-shadow: 0 0 100px 5px rgba(0, 0, 0, 0.7);
-}
-
 .skillPointer {
   display: flex;
   flex-direction: column;
@@ -113,11 +109,45 @@
 }
 
 .skillPointer img {
-  width: 40px;
+  width: 2.5rem;
   object-fit: cover;
   rotate: -45deg;
 }
 
-.skillPointer p {
-  font-size: 15px;
+/* Here starts the media queries for tablets */
+
+@media (max-width: 1024px) {
+  .experienceContent {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .skillPointer {
+    top: 0px;
+    right: 40px;
+  }
+
+  .skillsContent {
+    width: 80vw;
+    align-self: center;
+  }
+}
+
+/* Here starts the media queries for phones */
+
+@media (max-width: 600px) {
+  .experienceContent {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .skillPointer {
+    top: 20px;
+    right: 25px;
+  }
+
+  .skillsContent {
+    width: 100%;
+    align-self: center;
+  }
 }

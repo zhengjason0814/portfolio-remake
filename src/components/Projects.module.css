@@ -8,6 +8,12 @@
   height: 100vh;
 }
 
+.sectionTitle {
+  color: white;
+  font-size: 2.3rem;
+  text-shadow: 0 0 3px rgb(255, 255, 255);
+}
+
 .projectSection {
   display: flex;
   flex: 1;
@@ -83,7 +89,7 @@
 
   color: #ffffff;
   margin: 0px;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-weight: bold;
   text-decoration: none;
 
@@ -121,14 +127,75 @@
   flex: 2;
 
   text-align: left;
-  font-size: 14px;
+  font-size: 0.87rem;
+  color: rgba(255, 255, 255, 0.75);
 }
 
 .techIcon {
   display: inline-block;
   transition: transform 0.3s ease;
+  width: 3rem;
+  height: 3rem;
 }
 
 .techIcon:hover {
   transform: scale(1.1);
+}
+
+/* Here starts the media queries for tablets */
+
+@media (max-width: 1024px) {
+  .projectContainer {
+    height: 70vh;
+    margin: 0px 60px;
+  }
+
+  .projectSection {
+    max-height: 600px;
+    flex-direction: column;
+  }
+
+  .projectList {
+    flex-direction: row;
+    gap: 5px;
+
+    overflow-x: auto;
+  }
+
+  .projectItem {
+    flex: 1;
+    border-radius: 12px;
+    background-color: #101010;
+
+    margin: 7px 0px;
+    padding: 10px;
+    font-size: 0.9rem;
+    aspect-ratio: 1 / 1;
+  }
+
+  .projectImage {
+    height: 200px;
+  }
+
+  .techStack {
+    flex-direction: row;
+  }
+}
+
+/* Here starts the media queries for phones */
+
+@media (max-width: 600px) {
+  .projectContainer {
+    height: 100vh;
+    max-width: 90%;
+  }
+
+  .projectDisplay {
+    padding: 10px;
+  }
+
+  .techIcon {
+    width: 3.75rem;
+    height: 3.75rem;
+  }
 }

@@ -10,6 +10,12 @@
   height: 100vh;
 }
 
+.sectionTitle {
+  font-size: 3rem;
+  color: #ffffff;
+  text-shadow: 0 0 3px rgb(255, 255, 255);
+}
+
 .photoContainer {
   display: flex;
   flex-direction: column;
@@ -21,7 +27,6 @@
 }
 
 .aboutText {
-  font-size: 16px;
   font-weight: 450;
   color: rgba(255, 255, 255, 0.75);
 }
@@ -38,4 +43,54 @@
 .temp:hover {
   transform: scale(1.05);
   box-shadow: 0 0 20px rgba(84, 84, 84, 0.5);
+}
+
+/* Here starts the media queries for tablets */
+
+@media (max-width: 1024px) {
+  .aboutContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    height: 85vh;
+    width: 80vw;
+  }
+
+  .temp {
+    width: 300px;
+    height: 300px;
+  }
+
+  .aboutText {
+    flex: 2;
+  }
+}
+
+/* Here starts the media queries for phones */
+
+@media (max-width: 600px) {
+  .aboutContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+
+    height: 90vh;
+  }
+
+  .temp {
+    width: 150px;
+    height: 150px;
+  }
+
+  .aboutText {
+    flex: 2;
+  }
+}
+
+/* Manual override for even smaller screens */
+@media (max-width: 400px) {
+  .aboutText {
+    font-size: 10px;
+  }
 }

@@ -7,29 +7,20 @@ import { SiRuby, SiMongodb, SiExpress } from "react-icons/si";
 
 import whiteArrow from "../assets/whiteArrow.png";
 
-export default function Expereience() {
+export default function Experience() {
   return (
     <motion.div
       initial={{ opacity: 0, x: -50 }}
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: false, amount: 0.3 }}
+      style={{ display: "flex", justifyContent: "center" }}
     >
       <div className={styles.experienceBlock} id="experience">
-        <p
-          style={{
-            fontSize: "40px",
-            fontWeight: "bold",
-            marginBottom: "15px",
-            color: "#ffffff",
-            textShadow: "0 0 3px rgb(255, 255, 255)",
-          }}
-        >
-          Experience & Skills
-        </p>
+        <p className={styles.sectionTitle}>Experience & Skills</p>
         <div className={styles.experienceContent}>
           <div className={styles.roles}>
-            <p style={{ fontSize: "30px" }}>
+            <p className={styles.technicalTitle}>
               <strong>Technical</strong>
             </p>
             <div className={styles.rebny}>

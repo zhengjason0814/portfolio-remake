@@ -39,6 +39,7 @@ export default function Contact() {
       whileInView={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: false, amount: 0.3 }}
+      style={{ display: "flex", justifyContent: "center" }}
     >
       <div className={styles.contactContainer} id="contact">
         <div className={styles.contactForm}>
