@@ -82,6 +82,11 @@
   color: #ffffff;
 }
 
+.formContainer textarea {
+  resize: vertical;
+  min-height:50px;
+}
+
 .formContainer input:focus,
 .formContainer textarea:focus {
   background-color: #191919;
