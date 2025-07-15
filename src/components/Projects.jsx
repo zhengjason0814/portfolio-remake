@@ -8,6 +8,8 @@ import { BsArrowUpRight } from "react-icons/bs";
 import calculatorImage from "../assets/calculatorImage.png";
 import walmartImage from "../assets/walmartImage.png";
 import customerImage from "../assets/customerImage.png";
+import productStore from "../assets/productStore.png";
+
 import {
   FaReact,
   FaPython,
@@ -17,6 +19,7 @@ import {
   FaCss3Alt,
   FaNodeJs,
 } from "react-icons/fa";
+import { IoStorefrontOutline } from "react-icons/io5";
 import {
   FaShoppingCart,
   FaCalculator,
@@ -45,18 +48,26 @@ export default function Projects() {
       desc: "A silly pirate gambling gaming highlighting the risks of gambling! Won 1st place in the Treasure Trove of Talent track at HopperHacks 2025.",
     },
     {
-      id: 2,
-      title: "Basic Online Calculator",
-      icon: <FaCalculator color="#34495e" />,
-      src: calculatorImage,
-      techStack: ["html", "css", "javascript"],
-      link: "https://zhengjason0814.github.io/calculator/",
-      desc: "An extremely basic online calculator that can do basic arithmetic operations.",
+      id:2,
+      title:"MERN Product Store",
+      icon: <FaShoppingCart color="#3a5aa6"/>,
+      src: productStore,
+      link:"https://mern-product-store-wdmm.onrender.com/",
+      techStack:[
+        "html",
+        "css",
+        "javascript",
+        "react",
+        "nodejs",
+        "express",
+        "mongodb",
+      ],
+      desc: "My very first MERN stack application! Add, delete, edit, and see all products within a MongoDB database! It's hosted for free on Render, please give it a minute to load.",
     },
     {
       id: 3,
       title: "Walmart RFID System",
-      icon: <FaShoppingCart color="#2c3e50" />,
+      icon: <IoStorefrontOutline color="#2c3e50" />,
       src: walmartImage,
       techStack: ["java"],
       link: "https://github.com/zhengjason0814/School-Projects",
@@ -73,6 +84,15 @@ export default function Projects() {
     },
     {
       id: 5,
+      title: "Basic Online Calculator",
+      icon: <FaCalculator color="#34495e" />,
+      src: calculatorImage,
+      techStack: ["html", "css", "javascript"],
+      link: "https://zhengjason0814.github.io/calculator/",
+      desc: "An extremely basic online calculator that can do basic arithmetic operations.",
+    },
+    {
+      id: 6,
       title: "Spotify Clone",
       icon: <FaSpotify color="#1DB954" />,
       src: waffle,
