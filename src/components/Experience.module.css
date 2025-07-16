@@ -60,12 +60,6 @@
   color: #d8e7e6;
 }
 
-.position,
-.roleDetails,
-.nonTechRole {
-  font-weight: 300;
-}
-
 .nonTechRole p {
   text-decoration: underline;
 }
