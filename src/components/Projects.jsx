@@ -9,6 +9,7 @@ import calculatorImage from "../assets/calculatorImage.png";
 import walmartImage from "../assets/walmartImage.png";
 import customerImage from "../assets/customerImage.png";
 import productStore from "../assets/productStore.png";
+import chatty from "../assets/chatty.png";
 
 import {
   FaReact,
@@ -18,17 +19,13 @@ import {
   FaHtml5,
   FaCss3Alt,
   FaNodeJs,
+  FaComments,
 } from "react-icons/fa";
 import { IoStorefrontOutline } from "react-icons/io5";
-import {
-  FaShoppingCart,
-  FaCalculator,
-  FaLightbulb,
-  FaSpotify,
-} from "react-icons/fa";
+import { FaShoppingCart, FaCalculator, FaLightbulb, FaSpotify } from "react-icons/fa";
 import { GiCrossedPistols } from "react-icons/gi";
 
-import { SiRuby, SiMongodb, SiExpress } from "react-icons/si";
+import { SiRuby, SiMongodb, SiExpress, SiTailwindcss } from "react-icons/si";
 
 export default function Projects() {
   const defaultProject = {
@@ -40,6 +37,15 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
+      title: "Chatty",
+      icon: <FaComments color="#0035baff" />,
+      src: chatty,
+      techStack: ["html", "css", "javascript", "react", "nodejs", "express", "mongodb", "tailwind"],
+      link: "https://chatty-c3so.onrender.com",
+      desc: "A chat application that acts as a platform for users to chat and video call with others in real-time to practice their language skills! Also includes a site color theme toggle, including a multitude of color themes such as light and dark mode to name a few.",
+    },
+    {
+      id: 2,
       title: "Pirate Gambling",
       icon: <GiCrossedPistols color="#705540" />,
       src: bootrush,
@@ -48,24 +54,16 @@ export default function Projects() {
       desc: "A silly pirate gambling gaming highlighting the risks of gambling! Won 1st place in the Treasure Trove of Talent track at HopperHacks 2025.",
     },
     {
-      id:2,
-      title:"MERN Product Store",
-      icon: <FaShoppingCart color="#3a5aa6"/>,
+      id: 3,
+      title: "MERN Product Store",
+      icon: <FaShoppingCart color="#3a5aa6" />,
       src: productStore,
-      link:"https://mern-product-store-wdmm.onrender.com/",
-      techStack:[
-        "html",
-        "css",
-        "javascript",
-        "react",
-        "nodejs",
-        "express",
-        "mongodb",
-      ],
+      link: "https://mern-product-store-wdmm.onrender.com/",
+      techStack: ["html", "css", "javascript", "react", "nodejs", "express", "mongodb"],
       desc: "My very first MERN stack application! Add, delete, edit, and see all products within a MongoDB database! It's hosted for free on Render, please give it a minute to load.",
     },
     {
-      id: 3,
+      id: 4,
       title: "Walmart RFID System",
       icon: <IoStorefrontOutline color="#2c3e50" />,
       src: walmartImage,
@@ -74,7 +72,7 @@ export default function Projects() {
       desc: "A demo of a department store RFID system that tracks inventory and provides real-time updates on stock levels.",
     },
     {
-      id: 4,
+      id: 5,
       title: "Inquiry Responder",
       icon: <FaLightbulb color="#f1c40f" />,
       src: customerImage,
@@ -83,7 +81,7 @@ export default function Projects() {
       desc: "A demo of a customer service inquiry responder that uses a properly inputted text file with issues and solutions to provide accurate and helpful responses to customer inquiries.",
     },
     {
-      id: 5,
+      id: 6,
       title: "Basic Online Calculator",
       icon: <FaCalculator color="#34495e" />,
       src: calculatorImage,
@@ -92,20 +90,12 @@ export default function Projects() {
       desc: "An extremely basic online calculator that can do basic arithmetic operations.",
     },
     {
-      id: 6,
+      id: 7,
       title: "Spotify Clone",
       icon: <FaSpotify color="#1DB954" />,
       src: waffle,
       link: "",
-      techStack: [
-        "html",
-        "css",
-        "javascript",
-        "react",
-        "nodejs",
-        "express",
-        "mongodb",
-      ],
+      techStack: ["html", "css", "javascript", "react", "nodejs", "express", "mongodb"],
       desc: "This is a planned project, TBD! Here's a picture of a waffle for now.",
     },
   ];
@@ -134,6 +124,8 @@ export default function Projects() {
         return <SiRuby className={styles.techIcon} color="#CC342D" />;
       case "python":
         return <FaPython className={styles.techIcon} color="#306998" />;
+      case "tailwind":
+        return <SiTailwindcss className={styles.techIcon} color="#38BDF8" />;
       default:
         return null;
     }
@@ -173,11 +165,7 @@ export default function Projects() {
               transition={{ duration: 0.3 }}
             >
               <div className={styles.projectDisplay}>
-                <img
-                  src={currProject.src}
-                  className={styles.projectImage}
-                  alt="project"
-                />
+                <img src={currProject.src} className={styles.projectImage} alt="project" />
                 <a
                   className={styles.projectTitle}
                   href={currProject.link}
