@@ -1,15 +1,15 @@
 import { useState } from "react";
 import styles from "./Projects.module.css";
-import waffle from "../assets/waffle.jpg";
-import bootrush from "../assets/bootrush.png";
-import blank from "../assets/blank.png";
+import waffle from "../../assets/waffle.jpg";
+import bootrush from "../../assets/bootrush.png";
+import blank from "../../assets/blank.png";
 import { motion, AnimatePresence } from "framer-motion";
 import { BsArrowUpRight } from "react-icons/bs";
-import calculatorImage from "../assets/calculatorImage.png";
-import walmartImage from "../assets/walmartImage.png";
-import customerImage from "../assets/customerImage.png";
-import productStore from "../assets/productStore.png";
-import chatty from "../assets/chatty.png";
+import calculatorImage from "../../assets/calculatorImage.png";
+import walmartImage from "../../assets/walmartImage.png";
+import customerImage from "../../assets/customerImage.png";
+import productStore from "../../assets/productStore.png";
+import chatty from "../../assets/chatty.png";
 
 import {
   FaReact,
@@ -31,7 +31,7 @@ export default function Projects() {
   const defaultProject = {
     title: "Portfolio Project",
     src: blank,
-    techStack: ["html", "css", "javascript"],
+    techStack: ["javascript", "html", "css"],
     desc: "You're looking at it!",
   };
   const projects = [
@@ -40,7 +40,7 @@ export default function Projects() {
       title: "Chatty",
       icon: <FaComments color="#0035baff" />,
       src: chatty,
-      techStack: ["html", "css", "javascript", "react", "nodejs", "express", "mongodb", "tailwind"],
+      techStack: ["javascript", "react", "nodejs", "express", "mongodb", "tailwind", "html", "css"],
       link: "https://chatty-c3so.onrender.com",
       desc: "A chat application that acts as a platform for users to chat and video call with others in real-time to practice their language skills! Also includes a site color theme toggle, including a multitude of color themes such as light and dark mode to name a few.",
     },
@@ -49,7 +49,7 @@ export default function Projects() {
       title: "Pirate Gambling",
       icon: <GiCrossedPistols color="#705540" />,
       src: bootrush,
-      techStack: ["html", "css", "javascript"],
+      techStack: ["javascript", "html", "css"],
       link: "https://zhengjason0814.github.io/bootyRush/index.html",
       desc: "A silly pirate gambling gaming highlighting the risks of gambling! Won 1st place in the Treasure Trove of Talent track at HopperHacks 2025.",
     },
@@ -59,7 +59,7 @@ export default function Projects() {
       icon: <FaShoppingCart color="#3a5aa6" />,
       src: productStore,
       link: "https://mern-product-store-wdmm.onrender.com/",
-      techStack: ["html", "css", "javascript", "react", "nodejs", "express", "mongodb"],
+      techStack: ["javascript", "react", "nodejs", "express", "mongodb", "html", "css"],
       desc: "My very first MERN stack application! Add, delete, edit, and see all products within a MongoDB database! It's hosted for free on Render, please give it a minute to load.",
     },
     {
@@ -95,7 +95,7 @@ export default function Projects() {
       icon: <FaSpotify color="#1DB954" />,
       src: waffle,
       link: "",
-      techStack: ["html", "css", "javascript", "react", "nodejs", "express", "mongodb"],
+      techStack: ["javascript", "react", "nodejs", "express", "mongodb", "html", "css"],
       desc: "This is a planned project, TBD! Here's a picture of a waffle for now.",
     },
   ];

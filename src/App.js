@@ -1,10 +1,10 @@
 import "./App.css";
-import Hero from "./components/Hero";
+import Hero from "./components/PageComponents/Hero";
 import Header from "./components/Header";
-import AboutMe from "./components/AboutMe";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import Contact from "./components/Contact";
+import AboutMe from "./components/PageComponents/AboutMe";
+import Experience from "./components/PageComponents/Experience";
+import Projects from "./components/PageComponents/Projects";
+import Contact from "./components/PageComponents/Contact";
 import Footer from "./components/Footer";
 
 function App() {
