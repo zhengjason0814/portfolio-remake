@@ -1,12 +1,3 @@
-@keyframes slideArrow {
-  0% {
-    transform: translate(0, 0);
-  }
-  100% {
-    transform: translate(5px, -5px);
-  }
-}
-
 .experienceBlock,
 .roles,
 .rebnyRole {
@@ -18,6 +9,7 @@
   color: #b0b0b0;
 
   min-height: 80vh;
+  margin-bottom: 6rem;
 }
 
 .sectionTitle {
@@ -69,61 +61,12 @@
   text-decoration: none;
 }
 
-.skillsContent {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  flex: 1;
-
-  position: relative;
-}
-
-.technologyContainer {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-
-  height: 70%;
-  width: 80%;
-}
-
-.skillPointer {
-  display: flex;
-  flex-direction: column;
-  gap: 14px;
-
-  position: absolute;
-  top: 40px;
-  right: -5px;
-  animation: slideArrow 1s infinite alternate;
-}
-
-.skillPointer img {
-  width: 2.5rem;
-  object-fit: cover;
-  rotate: -45deg;
-}
-
 /* Here starts the media queries for tablets */
 
 @media (max-width: 1024px) {
   .experienceContent {
     flex-direction: column;
     gap: 30px;
-  }
-
-  .skillPointer {
-    top: 0px;
-    right: 40px;
-  }
-
-  .skillsContent {
-    width: 80vw;
-    align-self: center;
   }
 }
 
@@ -133,15 +76,5 @@
   .experienceContent {
     flex-direction: column;
     gap: 30px;
-  }
-
-  .skillPointer {
-    top: 20px;
-    right: 25px;
-  }
-
-  .skillsContent {
-    width: 100%;
-    align-self: center;
   }
 }

@@ -1,11 +1,8 @@
 import styles from "./Experience.module.css";
 import { motion } from "framer-motion";
 import "react-circular-progressbar/dist/styles.css";
-import TechSkill from "../TechSkill";
-import { FaReact, FaPython, FaJava, FaJs, FaNodeJs } from "react-icons/fa";
-import { SiRuby, SiMongodb, SiExpress } from "react-icons/si";
 
-import whiteArrow from "../../assets/whiteArrow.png";
+import SkillCarousel from "../SkillCarousel";
 
 export default function Experience() {
   return (
@@ -58,25 +55,7 @@ export default function Experience() {
               </p>
             </div>
           </div>
-          <div className={styles.skillsContent}>
-            <p style={{ fontSize: "30px" }}>
-              <strong>Skills</strong>
-            </p>
-            <div className={styles.technologyContainer}>
-              <TechSkill className={styles.techIcon} value={65} icon={FaJava} color="#EA2D2E" />
-              <TechSkill className={styles.techIcon} value={80} icon={FaJs} color="#F7DF1E" />
-              <TechSkill className={styles.techIcon} value={70} icon={FaPython} color="#306998" />
-              <TechSkill className={styles.techIcon} value={60} icon={FaReact} color="#61DBFB" />
-              <TechSkill className={styles.techIcon} value={10} icon={SiRuby} color="#CC342D" />
-              <TechSkill className={styles.techIcon} value={10} icon={FaNodeJs} color="##339933" />
-              <TechSkill className={styles.techIcon} value={10} icon={SiMongodb} color="#47A248" />
-              <TechSkill className={styles.techIcon} value={10} icon={SiExpress} color="#ffffff" />
-            </div>
-            <div className={styles.skillPointer}>
-              <p>hover us!</p>
-              <img src={whiteArrow} alt="arrow pointing to skills saying hover them" />
-            </div>
-          </div>
+          <SkillCarousel className={styles.SkillCarousel} />
         </div>
       </div>
     </motion.div>

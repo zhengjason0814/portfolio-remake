@@ -5,7 +5,6 @@
   gap: 8px;
 
   width: 100%;
-  height: 100vh;
 }
 
 .sectionTitle {
@@ -41,7 +40,7 @@
   flex-direction: column;
   gap: 10px;
   padding: 13px;
-  overflow-x:auto;
+  overflow-x: auto;
 }
 
 .projectList {
@@ -147,7 +146,6 @@
 
 @media (max-width: 1024px) {
   .projectContainer {
-    height: 70vh;
     margin: 0px 60px;
   }
 
@@ -187,7 +185,6 @@
 
 @media (max-width: 600px) {
   .projectContainer {
-    height: 100vh;
     max-width: 90%;
   }
 

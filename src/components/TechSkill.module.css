@@ -9,7 +9,7 @@
 .techCircle:hover {
   transform: scale(1.1);
   border-radius: 50%;
-  box-shadow: 0 0 100px 5px rgba(0, 0, 0, 0.7);
+  box-shadow: 0 0 23px 5px rgba(0, 0, 0, 0.7);
 }
 
 .techIcon {

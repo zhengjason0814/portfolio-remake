@@ -1,0 +1,20 @@
+.skillSet {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.sectionTitle {
+  margin-bottom: 1rem;
+}
+
+.skillContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+
+  width: 66%;
+}

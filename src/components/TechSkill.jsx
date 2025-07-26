@@ -3,7 +3,7 @@ import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import styles from "./TechSkill.module.css";
 
-export default function TechSkill({ value, icon: Icon, color }) {
+export default function TechSkill({ value, icon: Icon, imgSrc, color }) {
   const [progress, setProgress] = useState(0);
 
   return (
@@ -29,7 +29,11 @@ export default function TechSkill({ value, icon: Icon, color }) {
           transform: "translate(-50%, -45%)",
         }}
       >
-        <Icon className={styles.techIcon} color={color} />
+        {Icon ? (
+          <Icon className={styles.techIcon} color={color} />
+        ) : (
+          <img src={imgSrc} alt="icon" style={{ width: "3rem", height: "3rem" }} />
+        )}
       </div>
     </div>
   );
