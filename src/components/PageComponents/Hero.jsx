@@ -65,13 +65,7 @@ export default function Hero() {
 
   return (
     <div className={styles.heroContainer}>
-      {init && (
-        <Particles
-          id="tsparticles"
-          loaded={particlesLoaded}
-          options={particlesOptions}
-        />
-      )}
+      {init && <Particles id="tsparticles" loaded={particlesLoaded} options={particlesOptions} />}
       <div className={styles.main}>
         <p className={styles.greeting}>Hi, I am</p>
         <h1 className={styles.nameContainer}>

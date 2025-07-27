@@ -27,7 +27,8 @@ export default function AboutMe() {
           reality, transforming simple thoughts into life-changing experiences.
           <br />
           <br />
-          In the past, I interned at <span style={{ color: "white" }}>REBNY</span>, where I built an{" "}
+          In the past, I interned at{" "}
+          <span style={{ color: "white" }}>Real Estate Board of New York</span>, where I built an{" "}
           <span style={{ color: "white" }}>AI assistant</span> to streamline customer inquiries
           about lease purchases. I’ve also competed in university hackathons, where in one, our team
           landed first place in a track for developing a meaningful application about gambling.
