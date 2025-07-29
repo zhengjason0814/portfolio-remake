@@ -1,5 +1,5 @@
 import styles from "./AboutMe.module.css";
-import temp from "../../assets/temp.png";
+import temp from "../../assets/temp.webp";
 import { motion } from "framer-motion";
 
 export default function AboutMe() {
@@ -23,13 +23,13 @@ export default function AboutMe() {
           <br />
           <br />
           Passionate about engineering awe-inspiring technology, I’m learning how to turn innovative
-          ideas into real-world applications. I strive to bring any idea — silly or serious — into
+          ideas into real-world applications. I strive to bring any idea, silly or serious, into
           reality, transforming simple thoughts into life-changing experiences.
           <br />
           <br />
           In the past, I interned at{" "}
           <span style={{ color: "white" }}>Real Estate Board of New York</span>, where I built an{" "}
-          <span style={{ color: "white" }}>AI assistant</span> to streamline customer inquiries
+          <span style={{ color: "white" }}>AI agent</span> to streamline customer inquiries
           about lease purchases. I’ve also competed in university hackathons, where in one, our team
           landed first place in a track for developing a meaningful application about gambling.
           <br />
