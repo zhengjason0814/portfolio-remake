@@ -75,7 +75,7 @@ export default function Hero() {
           I am a <span ref={typedRef}></span>
         </h2>
         <a
-          href="/resume.pdf"
+          href="/jasonResume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className={styles.resumeButton}
