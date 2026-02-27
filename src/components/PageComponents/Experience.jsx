@@ -20,10 +20,29 @@ export default function Experience() {
             <p className={styles.technicalTitle}>
               <strong>Technical</strong>
             </p>
+            <div className={styles.sbuRole}>
+              <p className={styles.sbuTitle}>
+                Stony Brook University MARCOM (Marketing & Communications Department)
+              </p>
+              <p className={styles.position}>
+                <em>Front-End Web Developer Intern | Sep 2025 - Present</em>
+              </p>
+              <ul className={styles.roleDetails}>
+                <li>
+                  Contributed to university's digital presence by building responsive webpages,
+                  developing reusable CMS components with HTML, CSS, and Bootstrap to streamline
+                  development.
+                </li>
+                <li>
+                  Collaborated with web team to troubleshoot and resolve issues to ensure
+                  WCAG-compliant accessibility for 30,000+ students, faculty, and external visitors.
+                </li>
+              </ul>
+            </div>
             <div className={styles.rebny}>
               <p className={styles.rebnyTitle}>REBNY</p>
               <p className={styles.position}>
-                <em>Technology Intern | Summer 2024</em>
+                <em>Software Engineering Intern | Summer 2024</em>
               </p>
               <ul className={styles.roleDetails}>
                 <li>
@@ -55,8 +74,8 @@ export default function Experience() {
               </p>
             </div>
           </div>
-          <SkillCarousel className={styles.SkillCarousel} />
         </div>
+        <SkillCarousel className={styles.SkillCarousel} />
       </div>
     </motion.div>
   );

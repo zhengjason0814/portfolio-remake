@@ -9,8 +9,10 @@
 
 .carouselContainer {
   position: relative;
-  width: 50%;
+  width: 100%;
   overflow: hidden;
+  align-self: center;
+  margin-top: 3rem;
 }
 
 .carouselContent {
@@ -55,7 +57,7 @@
 
   position: absolute;
   top: 0px;
-  right: 30px;
+  right: 170px;
   animation: slideArrow 1s infinite alternate;
 }
 
@@ -69,13 +71,8 @@
 
 @media (max-width: 1024px) {
   .skillPointer {
-    top: 0px;
-    right: 30px;
-  }
-
-  .carouselContainer {
-    align-self: center;
-    width: 100%;
+    top: 10px;
+    right: 50px;
   }
 }
 
@@ -83,7 +80,7 @@
 
 @media (max-width: 600px) {
   .skillPointer {
-    top: 20px;
-    right: 20px;
+    top: 10px;
+    right: 50px;
   }
 }

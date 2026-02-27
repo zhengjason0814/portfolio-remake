@@ -44,6 +44,16 @@
   font-weight: bold;
 }
 
+.sbuTitle {
+  display: inline-block;
+  background: linear-gradient(45deg, #a020f0 10%, #e3e3e3 90%);
+  -webkit-background-clip: text !important;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  font-weight: bold;
+}
+
 .rebnyRole {
   gap: 10px;
 }
