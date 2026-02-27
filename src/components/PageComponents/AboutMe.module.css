@@ -8,6 +8,7 @@
 
   width: calc(100% - var(--gap-space));
   margin-bottom: 6rem;
+  padding-top: 6rem;
 }
 
 .sectionTitle {

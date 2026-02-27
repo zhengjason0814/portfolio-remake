@@ -84,6 +84,13 @@ export default function Hero() {
           <p style={{ color: "#121212" }}>Resume</p>
         </a>
       </div>
+      <button
+        className={styles.scrollArrow}
+        onClick={() => document.getElementById("about").scrollIntoView({ behavior: "smooth" })}
+        aria-label="Scroll to About Me"
+      >
+        &#8964;
+      </button>
     </div>
   );
 }

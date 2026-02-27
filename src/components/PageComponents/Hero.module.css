@@ -67,7 +67,9 @@
   background-clip: text;
   -webkit-text-fill-color: transparent;
 
-  text-shadow: 0 0 3px rgba(255, 222, 14, 0.4), 0 0 5px rgba(228, 160, 83, 0.4);
+  text-shadow:
+    0 0 3px rgba(255, 222, 14, 0.4),
+    0 0 5px rgba(228, 160, 83, 0.4);
 }
 
 h1,
@@ -96,6 +98,38 @@ p {
 
 .resumeButton:hover {
   transform: scale(1.05);
+}
+
+.scrollArrow {
+  position: absolute;
+  bottom: 32px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+
+  color: rgb(249, 239, 170);
+  font-size: 3.6rem;
+  opacity: 0.75;
+
+  animation: bounce 2s ease-in-out infinite;
+}
+
+.scrollArrow:hover {
+  opacity: 1;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(6px);
+  }
 }
 
 /* Here starts media queries for phones, tablet un-needed*/

@@ -36,7 +36,7 @@ export default function AboutMe() {
           <span style={{ color: "white" }}> ~40,000</span> of students and staff.
           <br />
           <br />
-          I’ve also competed in university hackathons, some projects landing winning placements!
+          I’ve also competed in university hackathons, one project landing a winning placement!
           These projects included a pirate gambling application and a live AI fitness feedback
           coach.
           <br />
