@@ -25,7 +25,7 @@ export default function Experience() {
                 Stony Brook University MARCOM (Marketing & Communications Department)
               </p>
               <p className={styles.position}>
-                <em>Front-End Web Developer Intern | Sep 2025 - Present</em>
+                <em>Front-End Web Developer Intern | Sep 2025 - May 2026</em>
               </p>
               <ul className={styles.roleDetails}>
                 <li>
@@ -35,7 +35,7 @@ export default function Experience() {
                 </li>
                 <li>
                   Collaborated with web team to troubleshoot and resolve issues to ensure
-                  WCAG-compliant accessibility for 30,000+ students, faculty, and external visitors.
+                  WCAG-compliant accessibility for 40,000+ students, faculty, and external visitors.
                 </li>
               </ul>
             </div>

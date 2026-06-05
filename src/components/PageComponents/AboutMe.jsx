@@ -17,13 +17,12 @@ export default function AboutMe() {
           <img className={styles.temp} src={temp} alt="person smiling at camera" />
         </div>
         <p className={styles.aboutText}>
-          Hi there! I’m Jason Zheng, a student based in New York, about to obtain my undergraduate
-          degree at Stony Brook University with the goal of becoming a software developer.
+          Hi there! I’m Jason Zheng, a Stony Brook University graduate (B.S. Information Systems) based in New York.
           <br />
           <br />
           Passionate about engineering awe-inspiring technology, I’m learning how to turn innovative
-          ideas into real-world applications. I strive to be able tobring any idea, silly or
-          serious, into reality, bringing simple thoughts to life.
+          ideas into real-world applications. I strive to be able to bring any idea, silly or
+          serious, into reality, capable of building anything.
           <br />
           <br />
           In the past, I interned at{" "}
