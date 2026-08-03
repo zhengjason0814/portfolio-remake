@@ -145,6 +145,24 @@
   transform: scale(1.1);
 }
 
+/*
+  Fixed rather than absolute: .techStack sets overflow-x, which makes it clip on
+  both axes, so a tooltip positioned inside it would be cut off.
+*/
+.techTooltip {
+  position: fixed;
+  transform: translate(-50%, calc(-100% - 8px));
+  z-index: 5;
+
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  background-color: rgba(20, 20, 20, 0.95);
+  color: #ffffff;
+  font-size: 0.85rem;
+  white-space: nowrap;
+  pointer-events: none;
+}
+
 /* Here starts the media queries for tablets */
 
 @media (max-width: 1024px) {

@@ -3,7 +3,7 @@ import { CircularProgressbar, buildStyles } from "react-circular-progressbar";
 import "react-circular-progressbar/dist/styles.css";
 import styles from "./TechSkill.module.css";
 
-export default function TechSkill({ value, icon: Icon, imgSrc, color }) {
+export default function TechSkill({ value, icon: Icon, imgSrc, color, name }) {
   const [progress, setProgress] = useState(0);
 
   return (
@@ -12,6 +12,7 @@ export default function TechSkill({ value, icon: Icon, imgSrc, color }) {
       onMouseEnter={() => setProgress(value)}
       onMouseLeave={() => setProgress(0)}
     >
+      <span className={styles.tooltip}>{name}</span>
       <CircularProgressbar
         value={progress}
         styles={buildStyles({
@@ -30,9 +31,9 @@ export default function TechSkill({ value, icon: Icon, imgSrc, color }) {
         }}
       >
         {Icon ? (
-          <Icon className={styles.techIcon} color={color} />
+          <Icon className={styles.techIcon} color={color} title={name} />
         ) : (
-          <img src={imgSrc} alt="icon" style={{ width: "3rem", height: "3rem" }} />
+          <img src={imgSrc} alt={name} style={{ width: "3rem", height: "3rem" }} />
         )}
       </div>
     </div>

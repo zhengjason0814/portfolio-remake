@@ -11,33 +11,37 @@ import customerImage from "../../assets/customerImage.png";
 import productStore from "../../assets/productStore.png";
 import chatty from "../../assets/chatty.png";
 import liftSafe from "../../assets/liftSafe.png";
+import bread from "../../assets/bread.png";
 
-import {
-  FaReact,
-  FaPython,
-  FaJava,
-  FaJs,
-  FaHtml5,
-  FaCss3Alt,
-  FaNodeJs,
-  FaComments,
-  FaDumbbell,
-} from "react-icons/fa";
+import { FaComments, FaDumbbell, FaBreadSlice } from "react-icons/fa";
 import { IoStorefrontOutline } from "react-icons/io5";
 import { FaShoppingCart, FaCalculator, FaLightbulb, FaSpotify } from "react-icons/fa";
 import { GiCrossedPistols } from "react-icons/gi";
 
+// Brands with no full-colour SVG, or whose logo is monochrome by design.
 import {
-  SiRuby,
-  SiMongodb,
   SiExpress,
-  SiTailwindcss,
-  SiTypescript,
-  SiOpencv,
   SiMediapipe,
   SiGooglegemini,
   SiElevenlabs,
+  SiAmazonwebservices,
+  SiScikitlearn,
 } from "react-icons/si";
+import cssIcon from "../../assets/icons/css3.svg";
+import dockerIcon from "../../assets/icons/docker.svg";
+import fastapiIcon from "../../assets/icons/fastapi.svg";
+import htmlIcon from "../../assets/icons/html5.svg";
+import javaIcon from "../../assets/icons/java.svg";
+import javascriptIcon from "../../assets/icons/javascript.svg";
+import mongodbIcon from "../../assets/icons/mongodb.svg";
+import nodejsIcon from "../../assets/icons/nodejs.svg";
+import opencvIcon from "../../assets/icons/opencv.svg";
+import pythonIcon from "../../assets/icons/python.svg";
+import reactIcon from "../../assets/icons/react.svg";
+import redisIcon from "../../assets/icons/redis.svg";
+import rubyIcon from "../../assets/icons/ruby.svg";
+import tailwindIcon from "../../assets/icons/tailwindcss.svg";
+import typescriptIcon from "../../assets/icons/typescript.svg";
 
 export default function Projects() {
   const defaultProject = {
@@ -47,6 +51,28 @@ export default function Projects() {
     desc: "You're looking at it!",
   };
   const projects = [
+    {
+      id: 1,
+      title: "Bread",
+      icon: <FaBreadSlice color="#d9a441" />,
+      src: bread,
+      link: "https://bread-topaz.vercel.app",
+      techStack: [
+        "react",
+        "javascript",
+        "nodejs",
+        "express",
+        "mongodb",
+        "python",
+        "fastapi",
+        "redis",
+        "docker",
+        "aws",
+        "tailwind",
+        "scikitlearn",
+      ],
+      desc: "A personal finance app capable of connecting to real bank accounts through Plaid and automatically sorts transactions into categories! Three machine learning models handle spending forecasts, purchase classification, and flagging charges that look out of the ordinary. Built across four containerized services with Redis caching and receipt uploads to S3.",
+    },
     {
       id: 8,
       title: "LiftSafe",
@@ -121,7 +147,7 @@ export default function Projects() {
       desc: "An extremely basic online calculator that can do basic arithmetic operations.",
     },
     {
-      id: 8,
+      id: 9,
       title: "Spotify Clone",
       icon: <FaSpotify color="#1DB954" />,
       src: waffle,
@@ -132,41 +158,82 @@ export default function Projects() {
   ];
 
   const [currProject, setCurrProject] = useState(defaultProject);
+  // The tech column clips its own overflow, so the hover label is rendered
+  // outside it and positioned against the icon's viewport rect instead.
+  const [hoveredTech, setHoveredTech] = useState(null);
+
+  const showTechName = (event, tech) => {
+    const rect = event.currentTarget.getBoundingClientRect();
+    setHoveredTech({
+      name: techNames[tech] ?? tech,
+      x: rect.left + rect.width / 2,
+      y: rect.top,
+    });
+  };
+
+  // Full-colour logos, matching the skills carousel. Anything without one falls
+  // back to a tinted glyph below.
+  const techLogos = {
+    html: htmlIcon,
+    css: cssIcon,
+    javascript: javascriptIcon,
+    typescript: typescriptIcon,
+    react: reactIcon,
+    nodejs: nodejsIcon,
+    mongodb: mongodbIcon,
+    java: javaIcon,
+    ruby: rubyIcon,
+    python: pythonIcon,
+    tailwind: tailwindIcon,
+    opencv: opencvIcon,
+    fastapi: fastapiIcon,
+    redis: redisIcon,
+    docker: dockerIcon,
+  };
+
+  const techNames = {
+    html: "HTML",
+    css: "CSS",
+    javascript: "JavaScript",
+    typescript: "TypeScript",
+    react: "React",
+    nodejs: "Node.js",
+    express: "Express",
+    mongodb: "MongoDB",
+    java: "Java",
+    ruby: "Ruby",
+    python: "Python",
+    tailwind: "Tailwind CSS",
+    opencv: "OpenCV",
+    mediapipe: "MediaPipe",
+    googlegemini: "Google Gemini",
+    elevenlabs: "ElevenLabs",
+    fastapi: "FastAPI",
+    redis: "Redis",
+    docker: "Docker",
+    aws: "AWS",
+    scikitlearn: "scikit-learn",
+  };
 
   const getIconForTech = (tech) => {
+    const logo = techLogos[tech];
+    if (logo) {
+      return <img src={logo} alt={techNames[tech]} className={styles.techIcon} />;
+    }
+
     switch (tech) {
-      case "html":
-        return <FaHtml5 className={styles.techIcon} color="#E34F26" />;
-      case "css":
-        return <FaCss3Alt className={styles.techIcon} color="#1572B6" />;
-      case "javascript":
-        return <FaJs className={styles.techIcon} color="#F7DF1E" />;
-      case "react":
-        return <FaReact className={styles.techIcon} color="#61DBFB" />;
-      case "nodejs":
-        return <FaNodeJs className={styles.techIcon} color="#339933" />;
       case "express":
-        return <SiExpress className={styles.techIcon} color="#ffffff" />;
-      case "mongodb":
-        return <SiMongodb className={styles.techIcon} color="#47A248" />;
-      case "java":
-        return <FaJava className={styles.techIcon} color="#EA2D2E" />;
-      case "ruby":
-        return <SiRuby className={styles.techIcon} color="#CC342D" />;
-      case "python":
-        return <FaPython className={styles.techIcon} color="#306998" />;
-      case "tailwind":
-        return <SiTailwindcss className={styles.techIcon} color="#38BDF8" />;
-      case "typescript":
-        return <SiTypescript className={styles.techIcon} color="#3178C6" />;
-      case "opencv":
-        return <SiOpencv className={styles.techIcon} color="#4eff1d" />;
+        return <SiExpress className={styles.techIcon} color="#F9F9F9" title="Express" />;
       case "mediapipe":
-        return <SiMediapipe className={styles.techIcon} color="#0097A7" />;
+        return <SiMediapipe className={styles.techIcon} color="#0097A7" title="MediaPipe" />;
       case "googlegemini":
-        return <SiGooglegemini className={styles.techIcon} color="#8E75B2" />;
+        return <SiGooglegemini className={styles.techIcon} color="#8E75B2" title="Google Gemini" />;
       case "elevenlabs":
-        return <SiElevenlabs className={styles.techIcon} color="#ffffff" />;
+        return <SiElevenlabs className={styles.techIcon} color="#F9F9F9" title="ElevenLabs" />;
+      case "aws":
+        return <SiAmazonwebservices className={styles.techIcon} color="#FF9900" title="AWS" />;
+      case "scikitlearn":
+        return <SiScikitlearn className={styles.techIcon} color="#F7931E" title="scikit-learn" />;
       default:
         return null;
     }
@@ -236,6 +303,8 @@ export default function Projects() {
                   initial={{ opacity: 0 }}
                   animate={{ opacity: 1 }}
                   transition={{ delay: 0.1 * index }}
+                  onMouseEnter={(event) => showTechName(event, tech)}
+                  onMouseLeave={() => setHoveredTech(null)}
                 >
                   {getIconForTech(tech)}
                 </motion.div>
@@ -243,6 +312,15 @@ export default function Projects() {
             </motion.div>
           </AnimatePresence>
         </div>
+
+        {hoveredTech && (
+          <span
+            className={styles.techTooltip}
+            style={{ left: hoveredTech.x, top: hoveredTech.y }}
+          >
+            {hoveredTech.name}
+          </span>
+        )}
       </div>
     </motion.div>
   );

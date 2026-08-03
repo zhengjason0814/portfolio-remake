@@ -16,3 +16,40 @@
   width: 3rem;
   height: 3rem;
 }
+
+.tooltip {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin-bottom: 0.5rem;
+
+  padding: 0.3rem 0.6rem;
+  border-radius: 6px;
+  background-color: rgba(20, 20, 20, 0.95);
+  color: #ffffff;
+  font-size: 0.85rem;
+  white-space: nowrap;
+
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.25s ease;
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Small arrow tying the tooltip to the circle below it. */
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border: 5px solid transparent;
+  border-top-color: rgba(20, 20, 20, 0.95);
+}
+
+.techCircle:hover .tooltip {
+  opacity: 1;
+  visibility: visible;
+}

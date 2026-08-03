@@ -13,6 +13,7 @@ const SkillSection = ({ title, icons }) => {
             value={icon.value}
             color={icon.color}
             imgSrc={icon.imgSrc}
+            name={icon.name}
           />
         ))}
       </div>
